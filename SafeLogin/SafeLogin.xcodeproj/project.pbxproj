@@ -57,7 +57,7 @@
 				687FBF5C2C0E5FCE00462E6B /* View */,
 				687FBF5E2C0E613600462E6B /* ViewModel */,
 				687FBF5D2C0E612000462E6B /* Model */,
-				687FBF502C0E5C2C00462E6B /* Assets.xcassets */,
+				687FBF5F2C0EFFCA00462E6B /* Resources */,
 				687FBF522C0E5C2C00462E6B /* Preview Content */,
 			);
 			path = SafeLogin;
@@ -100,6 +100,14 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		687FBF5F2C0EFFCA00462E6B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				687FBF502C0E5C2C00462E6B /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
