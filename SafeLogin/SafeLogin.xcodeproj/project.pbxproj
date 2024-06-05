@@ -13,6 +13,7 @@
 		687FBF512C0E5C2C00462E6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 687FBF502C0E5C2C00462E6B /* Assets.xcassets */; };
 		687FBF542C0E5C2C00462E6B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 687FBF532C0E5C2C00462E6B /* Preview Assets.xcassets */; };
 		AFAFA1382C0EFCCF00650526 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAFA1372C0EFCCF00650526 /* SplashView.swift */; };
+		687FBF612C0F0BB600462E6B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687FBF602C0F0BB600462E6B /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		687FBF502C0E5C2C00462E6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		687FBF532C0E5C2C00462E6B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AFAFA1372C0EFCCF00650526 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		687FBF602C0F0BB600462E6B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +61,7 @@
 				687FBF5C2C0E5FCE00462E6B /* View */,
 				687FBF5E2C0E613600462E6B /* ViewModel */,
 				687FBF5D2C0E612000462E6B /* Model */,
-				687FBF502C0E5C2C00462E6B /* Assets.xcassets */,
+				687FBF5F2C0EFFCA00462E6B /* Resources */,
 				687FBF522C0E5C2C00462E6B /* Preview Content */,
 			);
 			path = SafeLogin;
@@ -87,6 +89,7 @@
 				687FBF4C2C0E5C2C00462E6B /* ContentView.swift */,
 				687FBF4E2C0E5C2C00462E6B /* Item.swift */,
 				AFAFA1372C0EFCCF00650526 /* SplashView.swift */,
+				687FBF602C0F0BB600462E6B /* LoginView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -103,6 +106,14 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		687FBF5F2C0EFFCA00462E6B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				687FBF502C0E5C2C00462E6B /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +212,7 @@
 				687FBF4D2C0E5C2C00462E6B /* ContentView.swift in Sources */,
 				AFAFA1382C0EFCCF00650526 /* SplashView.swift in Sources */,
 				687FBF4F2C0E5C2C00462E6B /* Item.swift in Sources */,
+				687FBF612C0F0BB600462E6B /* LoginView.swift in Sources */,
 				687FBF4B2C0E5C2C00462E6B /* SafeLoginApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
