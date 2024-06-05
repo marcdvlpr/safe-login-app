@@ -12,6 +12,7 @@
 		687FBF4F2C0E5C2C00462E6B /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687FBF4E2C0E5C2C00462E6B /* Item.swift */; };
 		687FBF512C0E5C2C00462E6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 687FBF502C0E5C2C00462E6B /* Assets.xcassets */; };
 		687FBF542C0E5C2C00462E6B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 687FBF532C0E5C2C00462E6B /* Preview Assets.xcassets */; };
+		AFAFA1382C0EFCCF00650526 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAFA1372C0EFCCF00650526 /* SplashView.swift */; };
 		687FBF612C0F0BB600462E6B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687FBF602C0F0BB600462E6B /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
@@ -22,6 +23,7 @@
 		687FBF4E2C0E5C2C00462E6B /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		687FBF502C0E5C2C00462E6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		687FBF532C0E5C2C00462E6B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AFAFA1372C0EFCCF00650526 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		687FBF602C0F0BB600462E6B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +88,7 @@
 			children = (
 				687FBF4C2C0E5C2C00462E6B /* ContentView.swift */,
 				687FBF4E2C0E5C2C00462E6B /* Item.swift */,
+				AFAFA1372C0EFCCF00650526 /* SplashView.swift */,
 				687FBF602C0F0BB600462E6B /* LoginView.swift */,
 			);
 			path = View;
@@ -207,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				687FBF4D2C0E5C2C00462E6B /* ContentView.swift in Sources */,
+				AFAFA1382C0EFCCF00650526 /* SplashView.swift in Sources */,
 				687FBF4F2C0E5C2C00462E6B /* Item.swift in Sources */,
 				687FBF612C0F0BB600462E6B /* LoginView.swift in Sources */,
 				687FBF4B2C0E5C2C00462E6B /* SafeLoginApp.swift in Sources */,
