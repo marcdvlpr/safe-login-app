@@ -9,9 +9,8 @@ import SwiftUI
 
 struct LoginView: View {
 
-    @State private var userName: String = ""
+    @State private var email: String = ""
     @State private var password: String = ""
-    @State var isSecure: Bool = true
 
     var body: some View {
         NavigationStack {
@@ -35,15 +34,21 @@ struct LoginView: View {
                             .bold()
                             .foregroundStyle(Color("FontColor"))
 
-                        TextField("Enter your email", text: $userName)
-                            .padding()
-                            .frame(height: 50)
-                            .background(.white)
-                            .cornerRadius(10)
-                            .foregroundStyle(Color("DarkGray"))
-                            .textInputAutocapitalization(.never)
-                            .keyboardType(.emailAddress)
-                            .autocorrectionDisabled(true)
+                        TextField("",
+                                  text: $email,
+                                  prompt: Text("Enter your email")
+                                            .foregroundStyle(Color("Gray"))
+                        )
+                        .foregroundColor(.white)
+                        .padding(.vertical, 10)
+                        .overlay(
+                            Rectangle().frame(width: nil, height: 1, alignment: .bottom)
+                                .foregroundColor(Color("Gray")),
+                            alignment: .bottom
+                        )
+                        .textInputAutocapitalization(.never)
+                        .keyboardType(.emailAddress)
+                        .autocorrectionDisabled(true)
                     }
                     .padding()
 
@@ -68,12 +73,13 @@ struct LoginView: View {
                         .frame(maxWidth: .infinity, maxHeight: 50)
                         .foregroundColor(.white)
                         .background(Color("Primary"))
-                        .cornerRadius(10)
+                        .cornerRadius(36)
                         .padding()
                     }
 
                     NavigationLink {
-                        EmptyView()
+                        RegisterView()
+                            .navigationBarBackButtonHidden()
                     } label: {
                         HStack(spacing: 5) {
                             Text("Don't have an account?")
@@ -101,22 +107,32 @@ struct AnimatedSecureTextField: View {
     var body: some View {
         ZStack(alignment: .trailing) {
             if isSecure {
-                SecureField(titleKey, text: $text)
-                    .padding()
-                    .padding(.trailing, 30)
-                    .frame(height: 50)
-                    .background(.white)
-                    .cornerRadius(10)
-                    .foregroundColor(Color("DarkGray"))
-
+                SecureField("",
+                            text: $text,
+                            prompt: Text("Enter your password")
+                    .foregroundStyle(Color("Gray"))
+                )
+                .foregroundColor(.white)
+                .padding(.vertical, 10)
+                .overlay(
+                    Rectangle().frame(width: nil, height: 1, alignment: .bottom)
+                        .foregroundColor(Color("Gray")),
+                    alignment: .bottom
+                )
             } else {
                 TextField(titleKey, text: $text)
-                    .padding()
-                    .padding(.trailing, 30)
-                    .frame(height: 50)
-                    .background(.white)
-                    .cornerRadius(10)
-                    .foregroundColor(Color("DarkGray"))
+                TextField("",
+                          text: $text,
+                          prompt: Text("Enter your email")
+                                    .foregroundStyle(Color("Gray"))
+                )
+                .foregroundColor(.white)
+                .padding(.vertical, 10)
+                .overlay(
+                    Rectangle().frame(width: nil, height: 1, alignment: .bottom)
+                        .foregroundColor(Color("Gray")),
+                    alignment: .bottom
+                )
             }
 
             Button(action: {

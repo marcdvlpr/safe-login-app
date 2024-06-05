@@ -8,67 +8,96 @@
 import SwiftUI
 
 struct RegisterView: View {
-    @State private var emailfield: String = ""
-    @State private var passwordfield: String = ""
-    @State private var isPasswordVisible: Bool = false
+
+    @State private var email: String = ""
+    @State private var password: String = ""
+    @Environment(\.dismiss) private var dismiss
+
     var body: some View {
-        VStack {
-                        Spacer()
-            Image("logo")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 200, height: 200)
-//            Spacer()
-                .padding()
-            VStack(alignment: .leading) {
-                Text("Email")
-                    .multilineTextAlignment(.leading)
-                HStack {
-                    Image(systemName: "envelope")
-                    TextField("Enter your Email", text: $emailfield)
-                        .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
-                        .disableAutocorrection(/*@START_MENU_TOKEN@*/false/*@END_MENU_TOKEN@*/)
-                        .padding(.vertical, 10)
-                        .overlay(Rectangle().padding(.top, 41))
-                        .foregroundStyle(Color.gray)
-                        .padding(10)
-                }
-                .padding(.bottom)
-                Text("Password")
-                    .multilineTextAlignment(.leading)
-                HStack {
-                    Image(systemName: "lock")
-                    if isPasswordVisible {
-                        TextField("Password", text: $passwordfield)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                    } else {
-                        SecureField("Enter your Password", text: $passwordfield)
-                            .padding(.vertical, 10)
-                            .overlay(Rectangle().padding(.top, 40))
-                            .foregroundStyle(Color.gray)
-                            .padding(10)
-                        Image(systemName: isPasswordVisible ? "eye.splash.fill" : "eye.fill")
-                    }
+        NavigationStack {
+            ZStack {
+                VStack {
+                    Image("logo")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 150)
+
+                    Text("Safe Login")
+                        .foregroundStyle(Color("FontColor"))
+                        .fontWeight(.bold)
+                        .font(.title)
+
                     Spacer()
-                }
-                Spacer()
-                Button(action: {
-                    isPasswordVisible.toggle()
-                }) {
-                    Text("Register")
-                        .frame(maxWidth: .infinity)
+
+                    VStack(alignment: .leading) {
+                        Text("Email")
+                            .font(.title3)
+                            .bold()
+                            .foregroundStyle(Color("FontColor"))
+
+                        TextField("",
+                                  text: $email,
+                                  prompt: Text("Enter your email")
+                                            .foregroundStyle(Color("Gray"))
+                        )
+                        .foregroundColor(.white)
+                        .padding(.vertical, 10)
+                        .overlay(
+                            Rectangle().frame(width: nil, height: 1, alignment: .bottom)
+                                .foregroundColor(Color("Gray")),
+                            alignment: .bottom
+                        )
+                        .textInputAutocapitalization(.never)
+                        .keyboardType(.emailAddress)
+                        .autocorrectionDisabled(true)
+                    }
+                    .padding()
+
+                    VStack(alignment: .leading) {
+                        Text("Password")
+                            .font(.title3)
+                            .bold()
+                            .foregroundStyle(Color("FontColor"))
+
+                        AnimatedSecureTextField(text: $password, titleKey: "Enter your password")
+                    }
+                    .padding()
+
+                    Spacer()
+
+                    NavigationLink {
+                        EmptyView()
+                    } label: {
+                        HStack {
+                            Text("Register")
+                        }
+                        .frame(maxWidth: .infinity, maxHeight: 50)
+                        .foregroundColor(.white)
+                        .background(Color("Primary"))
+                        .cornerRadius(36)
                         .padding()
-                        .background(Color.blue)
-                        .foregroundStyle(.white)
-                        .cornerRadius(40)
+                    }
+
+                    Button {
+                        dismiss()
+                    } label: {
+                        HStack(spacing: 5) {
+                            Text("Already have an account?")
+
+                            Text("Sign In")
+                                .fontWeight(.semibold)
+                        }
+                        .font(.footnote)
+                        .foregroundStyle(Color("DarkCyan"))
+                    }
                 }
-                Spacer()
-            }.padding()
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+            .background(Color("Background"))
         }
     }
 }
 
 #Preview {
-        RegisterView()
-    }
-
+    RegisterView()
+}
