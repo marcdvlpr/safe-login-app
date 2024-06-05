@@ -14,7 +14,7 @@ struct RegisterView: View {
     var body: some View {
         VStack {
                         Spacer()
-            Image("Logo")
+            Image("logo")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 200, height: 200)
