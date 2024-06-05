@@ -8,19 +8,55 @@
 import SwiftUI
 
 struct SplashView: View {
-    @State private var showSplash = false
-    @State private var size = 0.8
-    @State private var opacity = 0.5
+
+    @State private var scale = 0.0
+    @Binding var isActive: Bool
+
     var body: some View {
-        Image("logo")
-            .resizable()
-            .frame(width: 200, height: 200)
-        Text("Safe Login")
-            .font(Font.custom(".SFUIText", size: 40))
-            .foregroundColor(.white.opacity(0.80))
+        ZStack {
+            Rectangle()
+                .foregroundColor(Color("Background"))
+                .ignoresSafeArea()
+
+            GeometryReader { proxy in
+                let size = proxy.size
+
+                ZStack {
+                    VStack {
+                        Image("logo")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: size.width / 2, height: size.width / 2)
+                            .scaleEffect(scale)
+                            .animation(.interactiveSpring(
+                                response: 1,
+                                dampingFraction: 0.4,
+                                blendDuration: 1.5
+                            ), value: scale)
+                            .onAppear {
+                                scale = 1
+
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                                    withAnimation {
+                                        self.isActive = true
+                                    }
+                                }
+                            }
+
+                        Text("Safe Login")
+                            .font(Font.custom("Futura", size: 40))
+                            .foregroundStyle(Color("FontColor"))
+                            .fontWeight(.bold)
+                            .font(.title)
+                            .padding(30)
+                    }
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+            }
+        }
     }
 }
 
 #Preview {
-    SplashView()
+    SplashView(isActive: .constant(true))
 }
