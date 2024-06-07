@@ -17,7 +17,7 @@ struct HomeView: View {
                 List {
                     ForEach(credentials) { item in
                         NavigationLink {
-                            EmptyView()
+                            DetailView()
                         } label: {
                             RowView(itemName: item.itemName,
                                     userName: item.userName)
