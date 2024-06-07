@@ -19,7 +19,7 @@ struct DetailView: View {
         NavigationView {
             HStack {
                 VStack(alignment: .leading) {
-                    Form {
+                    List {
                         Text("Username")
                         HStack {
                             TextField("Username", text: $username, prompt: Text("johndoe@gmail.com"))
@@ -55,11 +55,11 @@ struct DetailView: View {
                             }
                         }
                     }
-                    Form {
+                    List {
                         Text("website")
                         TextField("", text: $website, prompt: Text("www.ubereats.com"))
                     }
-                    .frame(height: 470)
+                    .frame(height: 400)
                 }
                 .navigationTitle("Uber Eats")
                 .padding(.top)
