@@ -66,7 +66,8 @@ struct RegisterView: View {
                     Spacer()
 
                     NavigationLink {
-                        EmptyView()
+                        HomeView()
+                            .navigationBarBackButtonHidden()
                     } label: {
                         HStack {
                             Text("Register")
