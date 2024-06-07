@@ -22,7 +22,7 @@ struct MainTabView: View {
                     Text("Home")
                 }.tag(0)
 
-            HomeView()
+            GeneratorView()
                 .onAppear {
                     selectedIndex = 1
                 }
