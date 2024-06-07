@@ -65,7 +65,8 @@ struct LoginView: View {
                     Spacer()
 
                     NavigationLink {
-                        EmptyView()
+                        HomeView()
+                            .navigationBarBackButtonHidden()
                     } label: {
                         HStack {
                             Text("Login")
