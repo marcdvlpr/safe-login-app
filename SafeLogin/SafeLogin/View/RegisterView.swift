@@ -66,7 +66,7 @@ struct RegisterView: View {
                     Spacer()
 
                     NavigationLink {
-                        HomeView()
+                        MainTabView()
                             .navigationBarBackButtonHidden()
                     } label: {
                         HStack {
@@ -74,6 +74,7 @@ struct RegisterView: View {
                         }
                         .frame(maxWidth: .infinity, maxHeight: 50)
                         .foregroundColor(.white)
+                        .fontWeight(.bold)
                         .background(Color("Primary"))
                         .cornerRadius(36)
                         .padding()
