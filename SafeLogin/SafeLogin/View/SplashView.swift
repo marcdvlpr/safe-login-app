@@ -49,7 +49,7 @@ struct SplashView: View {
                             .fontWeight(.bold)
                             .font(.title)
                             .padding(30)
-                    }
+                     }
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
             }
