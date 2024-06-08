@@ -13,7 +13,6 @@ struct DetailView: View {
     @State private var website: String = ""
     @State private var buttonCopy: Bool = false
     @State private var passwordCopied: Bool = false
-    @State private var isPasswordValid: Bool = true
     var body: some View {
         NavigationView {
             HStack {
@@ -49,6 +48,13 @@ struct DetailView: View {
                                 Image(systemName: passwordCopied ? "checkmark.circle" : "ellipsis.circle")
                                     .foregroundStyle(.gray)
                             }
+                        }
+                        if hasEightCharacters(password: password) {
+                            Text("Le mot de passe est fort")
+                                .foregroundColor(.green)
+                        } else {
+                            Text("Le mot de passe n'est pas asser fort")
+                                .foregroundColor(.red)
                         }
                     }
                     List {
