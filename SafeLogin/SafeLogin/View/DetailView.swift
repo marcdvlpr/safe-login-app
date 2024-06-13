@@ -12,8 +12,6 @@ struct DetailView: View {
     @State private var password: String = ""
     @State private var website: String = ""
     @State private var buttonCopy: Bool = false
-    @State private var newPassword: String = ""
-    @State private var showModifyPassword: Bool = false
     @State private var passwordCopied: Bool = false
     var body: some View {
         NavigationView {
@@ -46,13 +44,17 @@ struct DetailView: View {
                                         passwordCopied = false
                                     }
                                 }
-                                Button("Reveal") {
-                                    password = ""
-                                }
-                            } label: {
-                                Image(systemName: showModifyPassword ? "checkmark.circle" : "ellipsis.circle")
+                            }label: {
+                                Image(systemName: passwordCopied ? "checkmark.circle" : "ellipsis.circle")
                                     .foregroundStyle(.gray)
                             }
+                        }
+                        if hasEightCharacters(password: password) {
+                            Text("Le mot de passe est fort")
+                                .foregroundColor(.green)
+                        } else {
+                            Text("Le mot de passe n'est pas asser fort")
+                                .foregroundColor(.red)
                         }
                     }
                     List {
@@ -66,6 +68,10 @@ struct DetailView: View {
             }
         }
     }
+    func hasEightCharacters(password: String) -> Bool {
+        return password.count >= 8
+}
+
 }
 
 #Preview {
