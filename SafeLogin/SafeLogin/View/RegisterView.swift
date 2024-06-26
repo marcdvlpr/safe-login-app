@@ -17,7 +17,7 @@ struct RegisterView: View {
         NavigationStack {
             ZStack {
                 VStack {
-                    Image("logo")
+                    Image(.logo)
                         .resizable()
                         .scaledToFit()
                         .frame(width: 150)
