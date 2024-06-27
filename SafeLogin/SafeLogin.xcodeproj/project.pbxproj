@@ -17,6 +17,7 @@
 		687FBF692C12F66300462E6B /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687FBF682C12F66300462E6B /* MainTabView.swift */; };
 		68B4DDAC2C2D65C900244C66 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B4DDAB2C2D65C900244C66 /* User.swift */; };
 		68B4DDAE2C2D66B300244C66 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B4DDAD2C2D66B300244C66 /* AuthViewModel.swift */; };
+		68B4DDB22C2D8ACE00244C66 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 68B4DDB12C2D8ACE00244C66 /* GoogleService-Info.plist */; };
 		68D0F6912C2C142000FB1D25 /* AnimatedSecureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D0F6902C2C142000FB1D25 /* AnimatedSecureTextField.swift */; };
 		68D0F6942C2C2CEF00FB1D25 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 68D0F6932C2C2CEF00FB1D25 /* FirebaseAuth */; };
 		68D0F6962C2C2CEF00FB1D25 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 68D0F6952C2C2CEF00FB1D25 /* FirebaseFirestore */; };
@@ -39,6 +40,7 @@
 		687FBF682C12F66300462E6B /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		68B4DDAB2C2D65C900244C66 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		68B4DDAD2C2D66B300244C66 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		68B4DDB12C2D8ACE00244C66 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		68D0F6902C2C142000FB1D25 /* AnimatedSecureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedSecureTextField.swift; sourceTree = "<group>"; };
 		6A88F8762C0F0C0000FC0799 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		6AD0AB432C1304D0009A4808 /* GeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorView.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 		687FBF492C0E5C2C00462E6B /* SafeLogin */ = {
 			isa = PBXGroup;
 			children = (
+				68B4DDB12C2D8ACE00244C66 /* GoogleService-Info.plist */,
 				68D0F68F2C2C13ED00FB1D25 /* Components */,
 				687FBF5B2C0E5F8F00462E6B /* App */,
 				687FBF5C2C0E5FCE00462E6B /* View */,
@@ -223,6 +226,7 @@
 			files = (
 				687FBF542C0E5C2C00462E6B /* Preview Assets.xcassets in Resources */,
 				687FBF512C0E5C2C00462E6B /* Assets.xcassets in Resources */,
+				68B4DDB22C2D8ACE00244C66 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
