@@ -11,12 +11,19 @@ import SwiftData
 struct ContentView: View {
 
     @State private var isActive = false
+    @EnvironmentObject var viewModel: AuthViewModel
 
     var body: some View {
-        if isActive {
-            LoginView()
-        } else {
-            SplashView(isActive: $isActive)
+        Group {
+            if isActive {
+                if viewModel.userSession != nil {
+                    MainTabView()
+                } else {
+                    LoginView()
+                }
+            } else {
+                SplashView(isActive: $isActive)
+            }
         }
     }
 }
