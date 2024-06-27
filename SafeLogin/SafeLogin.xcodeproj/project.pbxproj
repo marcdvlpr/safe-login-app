@@ -16,6 +16,9 @@
 		687FBF672C125BAF00462E6B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687FBF662C125BAF00462E6B /* HomeView.swift */; };
 		687FBF692C12F66300462E6B /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687FBF682C12F66300462E6B /* MainTabView.swift */; };
 		68D0F6912C2C142000FB1D25 /* AnimatedSecureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D0F6902C2C142000FB1D25 /* AnimatedSecureTextField.swift */; };
+		68D0F6942C2C2CEF00FB1D25 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 68D0F6932C2C2CEF00FB1D25 /* FirebaseAuth */; };
+		68D0F6962C2C2CEF00FB1D25 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 68D0F6952C2C2CEF00FB1D25 /* FirebaseFirestore */; };
+		68D0F6982C2C2CEF00FB1D25 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 68D0F6972C2C2CEF00FB1D25 /* FirebaseFirestoreSwift */; };
 		6A88F8772C0F0C0000FC0799 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A88F8762C0F0C0000FC0799 /* RegisterView.swift */; };
 		6AD0AB442C1304D0009A4808 /* GeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD0AB432C1304D0009A4808 /* GeneratorView.swift */; };
 		AFAF1DE72C119D090058CDD4 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAF1DE62C119D090058CDD4 /* DetailView.swift */; };
@@ -44,6 +47,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68D0F6942C2C2CEF00FB1D25 /* FirebaseAuth in Frameworks */,
+				68D0F6962C2C2CEF00FB1D25 /* FirebaseFirestore in Frameworks */,
+				68D0F6982C2C2CEF00FB1D25 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +165,11 @@
 			dependencies = (
 			);
 			name = SafeLogin;
+			packageProductDependencies = (
+				68D0F6932C2C2CEF00FB1D25 /* FirebaseAuth */,
+				68D0F6952C2C2CEF00FB1D25 /* FirebaseFirestore */,
+				68D0F6972C2C2CEF00FB1D25 /* FirebaseFirestoreSwift */,
+			);
 			productName = SafeLogin;
 			productReference = 687FBF472C0E5C2C00462E6B /* SafeLogin.app */;
 			productType = "com.apple.product-type.application";
@@ -187,6 +198,9 @@
 				Base,
 			);
 			mainGroup = 687FBF3E2C0E5C2C00462E6B;
+			packageReferences = (
+				68D0F6922C2C2CEF00FB1D25 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 687FBF482C0E5C2C00462E6B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -451,6 +465,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		68D0F6922C2C2CEF00FB1D25 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.28.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		68D0F6932C2C2CEF00FB1D25 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 68D0F6922C2C2CEF00FB1D25 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		68D0F6952C2C2CEF00FB1D25 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 68D0F6922C2C2CEF00FB1D25 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		68D0F6972C2C2CEF00FB1D25 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 68D0F6922C2C2CEF00FB1D25 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 687FBF3F2C0E5C2C00462E6B /* Project object */;
 }
