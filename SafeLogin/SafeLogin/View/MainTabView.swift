@@ -40,7 +40,7 @@ struct MainTabView: View {
                     Text("Search")
                 }.tag(2)
 
-            HomeView()
+            SettingsView()
                 .onAppear {
                     selectedIndex = 3
                 }
@@ -54,4 +54,5 @@ struct MainTabView: View {
 
 #Preview {
     MainTabView()
+        .environmentObject(AuthViewModel())
 }

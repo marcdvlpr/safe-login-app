@@ -24,7 +24,6 @@ struct HomeView: View {
                         }
                     }
                 }
-//                .listStyle(.plain)
                 .navigationTitle("Home")
                 .toolbar {
                     ToolbarItem(placement: .topBarTrailing) {
