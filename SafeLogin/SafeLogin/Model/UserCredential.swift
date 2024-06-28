@@ -7,6 +7,12 @@
 
 import Foundation
 
+/// A model representing a user's credential for a specific service or website.
+///
+/// The `UserCredential` struct stores information such as the item name, username, password, 
+/// and website associated with a user's credential.
+/// It also includes a sample data array for preview.
+///
 struct UserCredential: Identifiable {
     let id = UUID()
     let itemName: String
