@@ -62,6 +62,7 @@ struct GeneratorView: View {
      func generateRandomPassword(length: Int) -> String {
             var characters = ""
             var password = ""
+
             if toggleazisOn {
                  characters += "abcdefghijklmnopqrstuvwxyz"
                 password += String((0..<1).compactMap { _ in
