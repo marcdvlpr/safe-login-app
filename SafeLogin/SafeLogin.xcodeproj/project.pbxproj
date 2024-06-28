@@ -16,8 +16,8 @@
 		687FBF672C125BAF00462E6B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687FBF662C125BAF00462E6B /* HomeView.swift */; };
 		687FBF692C12F66300462E6B /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687FBF682C12F66300462E6B /* MainTabView.swift */; };
 		6A88F8772C0F0C0000FC0799 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A88F8762C0F0C0000FC0799 /* RegisterView.swift */; };
-		AFAF1DE72C119D090058CDD4 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAF1DE62C119D090058CDD4 /* DetailView.swift */; };
 		6AD0AB442C1304D0009A4808 /* GeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD0AB432C1304D0009A4808 /* GeneratorView.swift */; };
+		AFAF1DE72C119D090058CDD4 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAF1DE62C119D090058CDD4 /* DetailView.swift */; };
 		AFAFA1382C0EFCCF00650526 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAFA1372C0EFCCF00650526 /* SplashView.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,8 +32,8 @@
 		687FBF662C125BAF00462E6B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		687FBF682C12F66300462E6B /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		6A88F8762C0F0C0000FC0799 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
-		AFAF1DE62C119D090058CDD4 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		6AD0AB432C1304D0009A4808 /* GeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorView.swift; sourceTree = "<group>"; };
+		AFAF1DE62C119D090058CDD4 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		AFAFA1372C0EFCCF00650526 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
