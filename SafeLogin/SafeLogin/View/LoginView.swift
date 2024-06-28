@@ -11,12 +11,13 @@ struct LoginView: View {
 
     @State private var email: String = ""
     @State private var password: String = ""
+    @EnvironmentObject var viewModel: AuthViewModel
 
     var body: some View {
         NavigationStack {
             ZStack {
                 VStack {
-                    Image("logo")
+                    Image(.logo)
                         .resizable()
                         .scaledToFit()
                         .frame(width: 150)
@@ -64,9 +65,11 @@ struct LoginView: View {
 
                     Spacer()
 
-                    NavigationLink {
-                        MainTabView()
-                            .navigationBarBackButtonHidden()
+                    Button {
+                        Task {
+                            try await viewModel.login(email: email,
+                                                      password: password)
+                        }
                     } label: {
                         HStack {
                             Text("Login")
@@ -96,54 +99,6 @@ struct LoginView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
             .background(Color("Background"))
-        }
-    }
-}
-
-struct AnimatedSecureTextField: View {
-
-    @Binding var text: String
-    @State var isSecure: Bool = true
-    var titleKey: String
-
-    var body: some View {
-        ZStack(alignment: .trailing) {
-            if isSecure {
-                SecureField("",
-                            text: $text,
-                            prompt: Text("Enter your password")
-                    .foregroundStyle(Color("Gray"))
-                )
-                .foregroundColor(.white)
-                .padding(.vertical, 10)
-                .overlay(
-                    Rectangle().frame(width: nil, height: 1, alignment: .bottom)
-                        .foregroundColor(Color("Gray")),
-                    alignment: .bottom
-                )
-            } else {
-                TextField(titleKey, text: $text)
-                TextField("",
-                          text: $text,
-                          prompt: Text("Enter your email")
-                                    .foregroundStyle(Color("Gray"))
-                )
-                .foregroundColor(.white)
-                .padding(.vertical, 10)
-                .overlay(
-                    Rectangle().frame(width: nil, height: 1, alignment: .bottom)
-                        .foregroundColor(Color("Gray")),
-                    alignment: .bottom
-                )
-            }
-
-            Button(action: {
-                isSecure = !isSecure
-            }, label: {
-                Image(systemName: !isSecure ? "eye" : "eye.slash")
-                    .foregroundColor(.gray)
-                    .padding()
-            })
         }
     }
 }

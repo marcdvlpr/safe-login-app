@@ -2,7 +2,7 @@
 //  SplashView.swift
 //  SafeLogin
 //
-//  Created by Apprenant89 on 04/06/2024.
+//  Created by Apprenant124 on 04/06/2024.
 //
 
 import SwiftUI
@@ -23,7 +23,7 @@ struct SplashView: View {
 
                 ZStack {
                     VStack {
-                        Image("logo")
+                        Image(.logo)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: size.width / 2, height: size.width / 2)

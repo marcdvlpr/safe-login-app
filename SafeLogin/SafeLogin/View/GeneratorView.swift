@@ -61,19 +61,29 @@ struct GeneratorView: View {
 
      func generateRandomPassword(length: Int) -> String {
             var characters = ""
+            var password = ""
             if toggleazisOn {
                  characters += "abcdefghijklmnopqrstuvwxyz"
+                password += String((0..<1).compactMap { _ in
+                    "abcdefghijklmnopqrstuvwxyz".randomElement() })
             }
             if toggleAZisOn {
                  characters += "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                password += String((0..<1).compactMap { _ in
+                    "ABCDEFGHIJKLMNOPQRSTUVWXYZ".randomElement() })
             }
             if toggle09isOn {
                  characters += "0123456789"
+                password += String((0..<1).compactMap { _ in
+                    "0123456789".randomElement() })
             }
             if toggleCharisOn {
                  characters += "!@#$%^&*()_-+=<>?"
+                password += String((0..<1).compactMap { _ in
+                    "!@#$%^&*()_-+=<>?".randomElement() })
             }
-            return String((0..<length).compactMap { _ in characters.randomElement() })
+            password += String((0..<length - password.count).compactMap { _ in characters.randomElement() })
+            return password
      }
 }
 
