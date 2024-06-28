@@ -11,6 +11,7 @@ struct LoginView: View {
 
     @State private var email: String = ""
     @State private var password: String = ""
+    @EnvironmentObject var viewModel: AuthViewModel
 
     var body: some View {
         NavigationStack {
@@ -64,9 +65,11 @@ struct LoginView: View {
 
                     Spacer()
 
-                    NavigationLink {
-                        MainTabView()
-                            .navigationBarBackButtonHidden()
+                    Button {
+                        Task {
+                            try await viewModel.login(email: email,
+                                                      password: password)
+                        }
                     } label: {
                         HStack {
                             Text("Login")
