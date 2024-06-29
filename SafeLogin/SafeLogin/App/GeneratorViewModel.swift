@@ -25,16 +25,31 @@ class GeneratorViewModel {
         self.toggle09isOn = toggle09isOn
         self.toggleCharisOn = toggleCharisOn
     }
+    /*
+     Generates a random password based on the specified criteria.
 
-/**``generatePassword`` function to generate a password about the parameters added.
- - Parameters:
-    - length: to check the password length.
-    - toggleAZisOn: to check if a Uppercase character is include.
-    - toggleazisOn: to check if a Lowercase character is include.
-    - toggle09isOn: to check if a number is include.
-    - toggleCharisOn: to check if a special character is include.
-    - Returns: a "String" that represents the generated password.*/
-func generatePassword(length: Int, toggleAZisOn: Bool, toggleazisOn: Bool, toggle09isOn: Bool, toggleCharisOn: Bool) -> String {
+     This function creates a password by combining characters from different sets
+     (lowercase, uppercase, numbers, special characters)
+     based on the provided toggle settings. It ensures that at least one character from each selected set is included,
+     and then fills the rest of the password length with random characters from all selected sets.
+     **/
+    /**
+     ``generatePassword`` function to generate a password about the parameters added.
+     - Parameters:
+     - length: to check the password length.
+     - toggleAZisOn: to check if a Uppercase character is include.
+     - toggleazisOn: to check if a Lowercase character is include.
+     - toggle09isOn: to check if a number is include.
+     - toggleCharisOn: to check if a special character is include.
+     - Returns: a "String" that represents the generated password.
+     */
+func generatePassword(
+    length: Int,
+    toggleAZisOn: Bool,
+    toggleazisOn: Bool,
+    toggle09isOn: Bool,
+    toggleCharisOn: Bool
+) -> String {
         var characters = ""
         var password = ""
 
